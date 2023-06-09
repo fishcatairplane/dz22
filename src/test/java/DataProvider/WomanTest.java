@@ -11,9 +11,9 @@ public class WomanTest {
 
     @DataProvider(name = "personData")
     public Object[][] getPersonData() {
-        return new Object[][] {
-                { "Zoe", "Reno", 53 },
-                { "Anna", "Smith", 45 },
+        return new Object[][]{
+                {"Zoe", "Reno", 53},
+                {"Anna", "Smith", 45},
         };
     }
 
@@ -40,6 +40,7 @@ public class WomanTest {
         woman.setAge(50);
         Assert.assertEquals(woman.getAge(), 50);
     }
+
     @Test(description = "Test if woman is retired")
     public void testIsRetired() {
         Woman woman = new Woman("Zoe", "Reno", 53);

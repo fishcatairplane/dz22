@@ -1,5 +1,7 @@
 package DataProvider;
+
 import org.testng.annotations.DataProvider;
+
 public class TestDataProvider {
 
     @DataProvider(name = "age")

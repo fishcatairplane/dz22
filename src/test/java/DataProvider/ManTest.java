@@ -11,9 +11,9 @@ public class ManTest {
 
     @DataProvider(name = "personData")
     public Object[][] getPersonData() {
-        return new Object[][] {
-                { "Petro", "Chaika", 31 },
-                { "Ihor", "Shur", 42 },
+        return new Object[][]{
+                {"Petro", "Chaika", 31},
+                {"Ihor", "Shur", 42},
         };
     }
 
@@ -40,6 +40,7 @@ public class ManTest {
         man.setAge(61);
         Assert.assertEquals(man.getAge(), 61);
     }
+
     @Test(description = "Test if man is not retired")
     public void testIsRetired() {
         Man man = new Man("Petro", "Chaika", 31);
