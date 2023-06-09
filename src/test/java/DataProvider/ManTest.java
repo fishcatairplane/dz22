@@ -14,7 +14,6 @@ public class ManTest {
         return new Object[][] {
                 { "Petro", "Chaika", 31 },
                 { "Ihor", "Shur", 42 },
-                // Додайте інші дані про особу тут
         };
     }
 

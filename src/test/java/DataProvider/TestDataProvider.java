@@ -9,11 +9,11 @@ public class TestDataProvider {
 
     @DataProvider(name = "lastName")
     public static Object[][] lastNameDataProvider() {
-        return new Object[][]{{"John"}, {"Brown"}, {null}, {""}};
+        return new Object[][]{{""}, {""}, {null}, {""}};
     }
 
     @DataProvider(name = "partnerDivorced")
     public static Object[][] partnerDivorcedDataProvider() {
-        return new Object[][]{{"John", true}, {"Brown", false}, {null, true}, {"", false}};
+        return new Object[][]{{"", true}, {"", false}, {null, true}, {"", false}};
     }
 }

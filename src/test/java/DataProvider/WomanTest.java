@@ -14,7 +14,6 @@ public class WomanTest {
         return new Object[][] {
                 { "Zoe", "Reno", 53 },
                 { "Anna", "Smith", 45 },
-                // Додайте інші дані про особу тут
         };
     }
 
@@ -41,9 +40,6 @@ public class WomanTest {
         woman.setAge(50);
         Assert.assertEquals(woman.getAge(), 50);
     }
-
-    // Додайте інші тести з використанням провайдера даних
-
     @Test(description = "Test if woman is retired")
     public void testIsRetired() {
         Woman woman = new Woman("Zoe", "Reno", 53);
