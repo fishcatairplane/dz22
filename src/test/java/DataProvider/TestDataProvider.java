@@ -1,21 +1,39 @@
 package DataProvider;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class TestDataProvider {
 
-    @DataProvider(name = "age")
-    public static Object[][] ageDataProvider() {
-        return new Object[][]{{34}, {19}, {59}, {60}, {61}, {65}, {68}, {71}};
+    @DataProvider(name = "positiveManAge")
+    public static Object[][] positiveManAgeDataProvider() {
+        return new Object[][]{
+                {30}, {40}, {55}, {64}
+        };
     }
 
-    @DataProvider(name = "lastName")
-    public static Object[][] lastNameDataProvider() {
-        return new Object[][]{{""}, {""}, {null}, {""}};
+    @DataProvider(name = "positiveWomanAge")
+    public static Object[][] positiveWomanAgeDataProvider() {
+        return new Object[][]{
+                {20}, {35}, {50}, {59}
+        };
     }
 
-    @DataProvider(name = "partnerDivorced")
-    public static Object[][] partnerDivorcedDataProvider() {
-        return new Object[][]{{"", true}, {"", false}, {null, true}, {"", false}};
+    @DataProvider(name = "negativeAge")
+    public static Object[][] negativeAgeDataProvider() {
+        return new Object[][]{
+                {65}, {70}, {80}
+        };
+    }
+    @Test(dataProvider = "positiveManAge")
+    public void testPositiveManAge(int age) {
+    }
+
+    @Test(dataProvider = "positiveWomanAge")
+    public void testPositiveWomanAge(int age) {
+    }
+
+    @Test(dataProvider = "negativeAge")
+    public void testNegativeAge(int age) {
     }
 }

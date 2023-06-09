@@ -1,10 +1,10 @@
 package DataProvider;
 
 import com.Person.Man;
+import com.Person.Woman;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.Person.Woman;
 
 public class WomanTest {
     private Woman woman;
@@ -14,6 +14,14 @@ public class WomanTest {
         return new Object[][]{
                 {"Zoe", "Reno", 53},
                 {"Anna", "Smith", 45},
+        };
+    }
+
+    @DataProvider(name = "womanDataProvider")
+    public Object[][] getWomanData() {
+        return new Object[][]{
+                {new Woman("Zoe", "Reno", 53)},
+                {new Woman("Anna", "Smith", 45)},
         };
     }
 
@@ -81,4 +89,9 @@ public class WomanTest {
         woman.deregisterPartnership(false);
         Assert.assertEquals(woman.getLastName(), man.getLastName());
     }
+
+    @Test(dataProvider = "womanDataProvider", description = "Test woman object")
+    public void testWomanObject(Woman woman) {
+    }
 }
+
